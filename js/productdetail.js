@@ -38,6 +38,12 @@ $(function () {
   $.ajax({
     type:"get",
     url:"http://192.168.27.24:9090/api/getproductcom",
-    
+    data:{
+      productid:productid
+    },
+    dataType:"json",
+    success:function(info){
+      console.log(info);
+    }
   })
 })
