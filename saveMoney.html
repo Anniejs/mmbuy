@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 设置视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>商品列表页</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/saveMoney.css">
+
+</head>
+
+<body style="font-size: 12px;">
+  <!-- 页面结构搭建 -->
+  <div class="container">
+    <!-- 头部 -->
+    <div class="header">
+      <div class="logo">
+        <a href="javascript:history.go(-1);" title="返回上一页">
+          <!-- <img src="./images/header_logo.png" alt=""> -->
+        </a>
+      </div>
+      <h3>省钱控-最新优惠</h3>
+
+      <div class="appdown">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </div>  
+    <div class="recommen_product clearfix">
+      <!-- 准备第二个坑 -->
+      <ul> 
+      </ul>
+    </div>
+
+    <!-- 分页部分 准备一个分页容器-->
+    <div class="page">
+      <span class="w33">
+        <a href="#" class="prev">上一页</a>
+      </span>
+      <span class="w33">
+        <select name="select" class="select" selected>
+         <option value="1">1/2</option>
+        </select>
+      </span>
+      <span class="w33">
+        <a href="#" class="next">下一页</a>
+      </span>
+    </div>
+
+    <!-- 底部部分 -->
+    <div class="footer">
+      <ul class="f-nav clearfix">
+        <li class="w30">
+          <a href="#">登录</a>
+        </li>
+        <li class="w30">
+          <a href="#">注册</a>
+        </li>
+        <li class="w40">
+          <img src="./images/top.jpg" alt="">
+          <a href="#">返回顶部</a>
+        </li>
+      </ul>
+      <p class="Addr">
+        <a href="#" class="phoneApp">
+          手机APP下载
+        </a>
+        <a href="#" class="phone">
+          慢慢买手机版
+        </a>
+
+        -- 掌上比价平台
+
+      </p>
+      <p class="url">m.manmanbuy.com</p>
+    </div>
+  </div>
+
+
+   <!-- 准备模板渲染省钱控产品内容 -->
+   <script type="text/html" id="saveTmp">
+    {{ each list as v i }}
+      <li>
+          <a href="#">
+            <div class="pic">
+             {{#v.productImgSm}}
+            </div>
+            <div class="info clearfix">
+              <div class="title">         
+                 {{v.productName}}           
+                <span>{{v.productPinkage}}</span>
+              </div>
+              <div class="other clearfix">
+                <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+                <span class="comment">
+                  <img src="./images/2018-11-28_143352.jpg" alt="">
+                  {{v.counts}}
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
+        {{ /each }}
+  </script>
+
+
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="./js/tools.js"></script>
+  <script src="./js/saveMoney.js"></script>
+  <script>
+
+
+
+  </script>
+</body>
+
+</html>

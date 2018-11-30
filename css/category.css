@@ -402,6 +402,28 @@ i {
   margin-top: 0.13333333rem;
   margin-right: 10px;
 }
+.page {
+  background-color: #fff;
+  height: 0.48rem;
+}
+.page .w33 {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+}
+.page .w33 a {
+  display: block;
+  font-size: 0.21333333rem;
+  width: 1.09333333rem;
+  line-height: 0.42666667rem;
+  height: 0.42666667rem;
+  text-align: center;
+  background-color: #d4d4d4;
+  margin: 0 auto;
+  border: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  color: #000;
+}
 .category {
   margin-bottom: 20px;
   border: 1px solid #ededed;
