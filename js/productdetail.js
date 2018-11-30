@@ -44,6 +44,8 @@ $(function () {
     dataType:"json",
     success:function(info){
       console.log(info);
+      var htmlStr = template("commentTmp",info);
+      $(".info ul").html(htmlStr);
     }
   })
 })
