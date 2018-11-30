@@ -1,0 +1,65 @@
+@import "base";
+
+
+//左边固定右边自适应，左边左浮动，固定宽高右面overfl：hidden ,触发bfc
+.pro_content{
+  background-color: #fff;
+  padding: 10rem/@base;
+
+  .box{
+    
+    border-bottom: 1px solid #ccc;
+    
+  }
+  .left{
+    float: left;
+    width: 140rem/@base;
+    height: 140rem/@base;
+  }
+  .right{
+  
+    height: 140rem/@base;
+    padding-left: 20rem/@base;
+    overflow: hidden;
+    font-size:14rem/@base;
+    color: #666666;
+    .top{
+      .price{
+        color: red;
+      }
+    }
+    .info{
+    margin-top: 50rem/@base;
+    }
+    
+  }
+
+}
+.page{
+  background-color: #fff;
+  height: 36rem/@base;
+  // width: 100%;
+  .w33{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    
+    a{ 
+      display: block;     
+      font-size: 16rem/@base;
+      width: 82rem/@base;
+      line-height: 32rem/@base;
+      height: 32rem/@base;
+      text-align: center;
+      background-color: #d4d4d4;
+      margin: 0 auto;
+      border: 1px solid #bababa;
+      box-shadow: 0 0 1px #666;
+      color: #000;
+      
+      
+    }
+    
+  }
+}
+

@@ -1,0 +1,444 @@
+@charset "utf-8";
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  /* 让设置的 padding 和 border 自动内减 */
+  box-sizing: border-box;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+  background-color: #F7F7F7;
+}
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
+}
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  /* 取消链接高亮  */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  /*解决图片底部对齐问题*/
+  display: block;
+  border: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+/* 废物利用 */
+em,
+i {
+  font-style: normal;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.w33 {
+  width: 33.3%;
+}
+/*清除浮动*/
+/*
+  双伪元素法
+  1. before的作用: 防塌陷
+  2. after的作用: 清浮动
+*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  /* 触发bfc的类型 */
+  display: table;
+}
+.clearfix:after {
+  /* 清除浮动 */
+  clear: both;
+}
+/*单行溢出*/
+.one-txt-cut {
+  overflow: hidden;
+  /* 规定段落中的文本不换行 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 定义复用的精灵图类 */
+.jd_sprite {
+  /* 精灵图默认使用这个背景 */
+  background: url("../images/jd-sprites.png") no-repeat 0 0;
+  /* 这个背景是一个2倍图 */
+  background-size: 200px 200px;
+}
+/* 使用 rem 布局
+   1. 使用 rem 为单位, 根据基准值, 将px转换成rem
+   //使用rem布局移动端必须要引flexible
+   2. 动态设置 html font-size  (引包: flexible)
+*/
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+.container .header {
+  height: 0.66666667rem;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+}
+.container .header .logo {
+  padding: 0.16rem;
+}
+.container .header .logo a img {
+  width: 2.48rem;
+  height: 0.33333333rem;
+  overflow: hidden;
+}
+.container .header .appdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.09333333rem;
+}
+.container .header .appdown a img {
+  height: 0.45333333rem;
+  overflow: hidden;
+}
+.container #form_search {
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  background-color: #fff;
+}
+.container #form_search .search {
+  width: 100%;
+  position: relative;
+  padding-right: 0.93333333rem;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0.13333333rem;
+}
+.container #form_search .search input[type="search"] {
+  width: 90%;
+  border: none;
+  background: #f1f1f1;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 0.2rem;
+  font-size: 0.17333333rem;
+  padding-right: 0.66666667rem;
+  padding-left: 0.26666667rem;
+}
+.container #form_search .search input[type="button"] {
+  position: absolute;
+  top: 14px;
+  right: 0;
+  width: 10%;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #ff841d;
+  font-size: 0.21333333rem;
+}
+.container .nav {
+  padding-top: 0.13333333rem;
+  padding-bottom: 0.06666667rem;
+  background-color: #fff;
+}
+.container .nav li {
+  width: 25%;
+  text-align: center;
+  float: left;
+  overflow: hidden;
+  margin-top: 15px;
+}
+.container .nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.container .nav li a img {
+  width: 0.66666667rem;
+  height: 0.66666667rem;
+  margin: 0 auto;
+}
+.container .nav li a p {
+  text-align: center;
+  font-size: 0.16rem;
+  margin-top: 0.06666667rem;
+}
+.container .discount {
+  height: 0.46666667rem;
+  background-color: #ff841d;
+  line-height: 0.46666667rem;
+  overflow: hidden;
+  color: #fff;
+  font-size: 0.24rem;
+  font-weight: bold;
+  padding-left: 0.13333333rem;
+  border-bottom: 0.01333333rem solid #ffc881;
+  margin-top: 0.13333333rem;
+}
+.container .discount span {
+  font-weight: normal;
+  font-size: 0.21333333rem;
+}
+.container .discount img {
+  width: 0.26666667rem;
+  height: 0.26666667rem;
+  float: right;
+  margin-right: 0.13333333rem;
+  color: #FFF;
+  margin-top: 0.10666667rem;
+}
+.container .product {
+  background-color: #fff;
+  font-size: 0.18666667rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.container .product li {
+  padding: 0.18666667rem 0.10666667rem;
+  position: relative;
+  border-bottom: 0.01333333rem solid #cccccc;
+}
+.container .product li a {
+  display: block;
+}
+.container .product li .pic {
+  float: left;
+  width: 1.46666667rem;
+}
+.container .product li .pic img {
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+}
+.container .product li .info {
+  font-size: 14px;
+  line-height: 24px;
+  padding-left: 90px;
+}
+.container .product li .info .title {
+  color: #333333;
+  font-size: 0.2rem;
+  line-height: 0.25333333rem;
+  height: 0.76rem;
+  text-align: left;
+  font-weight: normal;
+}
+.container .product li .info .title span {
+  color: #ff841d;
+}
+.container .product li .info .other {
+  color: #a1a1a1;
+  font-size: 0.16rem;
+}
+.container .product li .info .other .mall {
+  float: left;
+  color: #a1a1a1;
+  font-size: 0.16rem;
+}
+.container .product li .info .other .comment {
+  float: right;
+  color: #a1a1a1;
+  font-size: 0.16rem;
+}
+.container .product li .info .other .comment img {
+  width: 0.18666667rem;
+  height: 0.2rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+.container .footer {
+  margin-top: 0.26666667rem;
+  width: 100%;
+  height: 3.24rem;
+}
+.container .footer .f-nav {
+  margin-bottom: 20px;
+}
+.container .footer .f-nav li {
+  float: left;
+  text-align: center;
+  font-size: 0.18666667rem;
+  border: 1px solid #ccc;
+  height: 0.88rem;
+  line-height: 0.88rem;
+}
+.container .footer .f-nav li a {
+  color: #000;
+}
+.container .footer .f-nav li.w30 {
+  width: 30%;
+}
+.container .footer .f-nav li.w40 {
+  width: 40%;
+  vertical-align: middle;
+  position: relative;
+}
+.container .footer .f-nav li.w40 img {
+  width: 0.26666667rem;
+  height: 0.26666667rem;
+  position: absolute;
+  top: 0.29333333rem;
+  left: 1.25333333rem;
+}
+.container .footer p {
+  text-align: center;
+}
+.container .footer p a {
+  color: #000;
+}
+.container .footer p a.phoneApp {
+  color: red;
+}
+.pro_nav {
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  border-top: 1px solid #ebebeb;
+  margin-top: 0.26666667rem;
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+}
+.pro_nav .nav_left {
+  float: left;
+  margin-left: 0.2rem;
+}
+.pro_nav .nav_left li {
+  float: left;
+}
+.pro_nav .nav_left li a {
+  display: inline;
+  color: #000;
+  font-size: 0.26666667rem;
+  font-weight: bold;
+}
+.pro_nav .nav_right {
+  height: 0.93333333rem;
+  float: right;
+  line-height: 0.93333333rem;
+}
+.pro_nav .nav_right button {
+  width: 1.6rem;
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  font-size: 0.26666667rem;
+  background-color: #ececec;
+  color: #000;
+  font-weight: bold;
+  margin-top: 0.13333333rem;
+  margin-right: 10px;
+}
+.category {
+  margin-bottom: 20px;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+  border-bottom: none;
+}
+.category .item-list {
+  background-color: #ededed;
+  line-height: 0.93333333rem;
+  font-size: 0.21333333rem;
+}
+.category .item-list .getCategory {
+  color: #000;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url(../images/arrow.jpg) no-repeat right center;
+  border-bottom: 1px solid #ccc;
+}
+.category .item-list ul {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-top: none;
+  background-color: #f9f9f9;
+}
+.category .item-list ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  text-indent: 0;
+}
+.category .item-list ul li a {
+  color: #666;
+  height: 100%;
+  display: block;
+}

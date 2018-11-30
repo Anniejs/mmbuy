@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 设置视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买首页</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<a name="top"></a>
+<body style="font-size: 12px;">
+  <!-- 页面结构搭建 -->
+  <div class="container">
+    <!-- 头部 -->
+    <div class="header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="./images/header_logo.png" alt="">
+        </a>
+      </div>
+
+      <div class="appdown">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </div>
+    <!-- 搜索部分 -->
+    <div id="form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品" name="">
+        <input type="button" value="搜索">
+      </form>
+    </div>
+    <!-- 导航部分 -->
+    <div class="nav">
+      <ul class="clearfix">
+        <!-- 挖一个坑 -->
+        
+      </ul>
+    </div>
+    <!-- 折扣部分 -->
+    <div class="discount">
+      <div class="list_content">
+        <span>超值折扣推荐</span>
+        <img src="./images/more.png" alt="">
+      </div>
+    </div>
+    <!-- 信息部分 -->
+    <div class="product">
+      <!-- 准备一个坑 -->
+      <ul class="clearfix"></ul>
+    </div>
+    <div class="more-info">
+      <a href="#">更多优惠信息 >></a>
+    </div>
+    <!-- 折扣部分 -->
+    <div class="discount">
+        <div class="list_content">
+          <span>品牌排行</span>
+          <img src="./images/more.png" alt="">
+        </div>
+      </div>
+    <!-- 底部部分 -->
+    <div class="footer">
+      <ul class="f-nav clearfix">
+        <li class="w30">
+          <a href="#">登录</a>
+        </li>
+        <li class="w30">
+            <a href="#">注册</a>
+          </li>
+          <li class="w40">
+            <img src="./images/top.jpg" alt="">
+              <a href="#top">返回顶部</a>
+            </li>
+      </ul>
+      <p class="Addr">
+        <a href="#" class="phoneApp">
+            手机APP下载
+        </a>
+        <a href="#" class="phone">
+            慢慢买手机版
+        </a>
+        
+        -- 掌上比价平台
+            
+      </p>
+      <p class="url">m.manmanbuy.com</p>
+    </div>
+  </div>
+  <!-- 准备模板菜单 -->
+  <script type="text/html" id="tpl">
+    {{each list as v i}}
+    <li class="{{v.indexmenuId==7?" more " : " "}}">
+        <a href="{{v.titlehref}}">
+          {{#v.img}}
+          <p>{{v.name}}</p>
+        </a>
+      </li>    
+    {{/each}}
+</script>
+
+  <!-- 准备模板 -->
+  <script type="text/html" id="productTmp">
+
+    {{ each list as v i }}
+      <li>
+          <a href="#">
+            <div class="pic">
+              {{#v.productImgSm}}
+            </div>
+            <div class="info clearfix">
+              <div class="title">
+                {{v.productName}}
+                <span>{{v.productPinkage}}</span>
+              </div>
+              <div class="other clearfix">
+                <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+                <span class="comment">
+                  <img src="./images/2018-11-28_143352.jpg" alt="">
+                  {{v.counts}}
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
+        {{ /each }}
+  </script>
+
+
+
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+
+  </script>
+</body>
+
+</html>
