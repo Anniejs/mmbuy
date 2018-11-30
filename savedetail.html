@@ -32,73 +32,7 @@
     
       <!-- 内容部分 -->
       <div class="savecontent">
-        <div class="top_render ">
-          <div class="title">
-              RIWA 雷瓦 T5 2档家用大功率电吹风2200W
-          </div>
-          <div class="info">
-            <span>天猫商城</span>
-            <span>10-25 12:52</span>
-            <span>开心小编泽炎 / 慢慢买</span>
-          </div>
-          <div class="content clearfix">
-            <div class="right fr">
-              <img src="./images/save1.jpg" alt="">
-            </div>
-            <div class="left"> 
-            <p class="desc">RIWA雷瓦这款T5 电吹风机，功率为2200W，
-              采用结构改性PP材料，耐高温，降体重，降噪音，热量均衡分布，过热断电，2200W大功率让头发吹干、定型能在短时间内完成。
-              天猫专卖店目前特价19.9元包邮，限购1件，刚需可入。</p>
-            <button class="gobuy">前往购买</button>
-          </div>
-        
-          </div>
-          <div class="imgBox">
-              <img src="./images/mmbweixin2.png" alt="">
-          </div>
-          <div class="commentArea">
-            <!-- 发表评论区域 -->
-            <div class="addcomment">
-              <div class="title">
-                发表评论
-              </div>
-              <div class="content">
-                <form action="" class="form">
-                  <textarea name="" id="" cols="30" rows="10">
-
-                  </textarea>
-                  <div class="ctrl clearfix">
-                    <input type="submit" value="发表评论">
-                  </div>
-                </form>
-              </div>
-              
-
-            </div>
-            <!-- 评论展示区域 -->
-            <div class="newcomment">
-              <div class="title">
-                最新评论
-              </div>
-              <ul>
-                <li class="clearfix">
-                  <div class="user">
-                    <img src="./images/user1_162.jpg" alt="">
-                  </div>
-                  <div class="user_content">
-                    <div class="title clearfix">
-                      <div class="name">Yan1994</div>
-                      <div class="time">2016/10/25 14:04:07</div>
-                    </div>
-                    <div class="comment">吹风机已经便宜的没有底线了</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-            
-
-        </div>
+       <!-- 准备一个大坑 -->
       </div>
 
 
@@ -131,7 +65,49 @@
     </div>
   </div>
 
+<!-- 准备模板引擎 -->
+<script type="text/html" id="saveTmp">
+<div class="top_render ">
 
+    <div class="title">
+        {{result[0].productName}}
+    </div>
+    <div class="info">
+      <span>{{result[0].productFrom}}</span>
+      <span>{{result[0].productTime}}</span>
+      <span>{{result[0].productTips}}</span>
+    </div>
+    <div class="content clearfix">
+      <div class="right fr">
+        {{#result[0].productImgSm}}
+      </div>
+      <div class="left"> 
+      <p class="desc">{{result[0].productInfo}}</p>
+      <div class="p3">
+        {{#result[0].productImgLg}}
+        </div>              
+    </div>
+    <div class="wrap">
+        {{#result[0].productCity}}
+    </div>
+    <div class="center">
+        <button class="gobuy">前往购买</button>
+    </div>
+    
+  
+    </div>
+    <div class="imgBox">
+        <img src="./images/mmbweixin2.png" alt="">
+    </div>
+    
+      <!-- 评论展示区域 -->
+   <div class="commentArea">
+      {{#result[0].productComment}}
+   </div>
+         
+  </div>
+
+</script>
   
 
 

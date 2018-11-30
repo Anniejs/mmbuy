@@ -466,10 +466,42 @@ i {
   font-size: 0.2rem;
   color: #606060;
 }
-.savecontent .top_render .content .left .gobuy {
-  width: 6.66666667rem;
-  height: 0.82666667rem;
-  line-height: 0.82666667rem;
+.savecontent .top_render .content .left .p3 {
+  width: 4.66666667rem;
+  height: 4.66666667rem;
+}
+.savecontent .top_render .wrap {
+  margin-top: 0.26666667rem;
+}
+.savecontent .top_render .wrap #disstorck {
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 1.84rem;
+  margin: 0 auto;
+}
+.savecontent .top_render .wrap #disstorck li {
+  font-size: 0.16rem;
+  font-family: "Microsoft Yahei";
+  line-height: 0.26666667rem;
+}
+.savecontent .top_render .wrap #disstorck li a {
+  display: block;
+  padding: 0px 10px;
+}
+.savecontent .top_render .wrap #disstorck li a span {
+  border-bottom: 1px dotted #c0c0c0;
+  display: block;
+  padding: 0px 10px;
+  text-align: left;
+}
+.savecontent .top_render .wrap #disstorck li a span strong {
+  float: right;
+  font-weight: normal;
+  color: #f27b04;
+}
+.savecontent .center .gobuy {
+  width: 100%;
+  height: 0.4rem;
+  line-height: 0.4rem;
   text-align: center;
   color: #fff;
   background-color: #f4830d;
@@ -478,65 +510,87 @@ i {
   margin-bottom: 5px;
   border-radius: 5px;
 }
-.savecontent .top_render .imgBox {
-  margin-top: 0.66666667rem;
+.savecontent .imgBox {
+  margin-top: 0.26666667rem;
 }
-.savecontent .top_render .commentArea .addcomment .title {
-  height: 0.8rem;
-  line-height: 0.8rem;
-  font-size: 0.4rem;
-  color: #000;
-  font-weight: 500;
+.savecontent .cu-content-pl .tit {
+  font-size: 0.21333333rem;
+  padding: 6px 8px;
 }
-.savecontent .top_render .commentArea .addcomment .form textarea {
+.savecontent .cu-content-pl .reply .form {
+  border: 2px solid #ECEAE8;
+  border-radius: 2px;
+  padding: 4px 0 0 4px;
+  background-color: #fff;
+  position: relative;
+  width: 98%;
+  margin: 0px auto;
+}
+.savecontent .cu-content-pl .reply .form textarea {
   width: 100%;
-  height: 2rem;
-  border: 1px solid #e4e2df;
-}
-.savecontent .top_render .commentArea .addcomment .form .ctrl input {
-  float: right;
-  width: 2.66666667rem;
-  height: 0.96rem;
-  background-color: #FF841D;
-  color: #fff;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border: none;
+  line-height: 0.29333333rem;
   font-size: 0.18666667rem;
+  outline: 0;
+  color: #666;
+  height: 0.90666667rem;
 }
-.savecontent .top_render .commentArea .newcomment .title {
-  height: 0.8rem;
-  line-height: 0.8rem;
-  font-size: 0.4rem;
-  color: #000;
-  font-weight: 500;
+.savecontent .cu-content-pl .reply .form .ctrl {
+  background-color: #fbfbfb;
+  height: 0.48rem;
+  margin-left: -4px;
+  border-top: solid 1px #f2f2f2;
 }
-.savecontent .top_render .commentArea .newcomment li .user {
-  float: left;
+.savecontent .cu-content-pl .reply .form .ctrl input {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  background: #ff841d;
+  border: none;
+  border: 2px solid #ff841d;
+  border-left: none;
+  border-top: none;
+  padding: 0px;
+  width: 1.33333333rem;
+  height: 0.52rem;
+  color: #fff;
+  outline: 0;
+  border-radius: 0 0 2px 0;
+  font-size: 0.21333333rem;
+}
+.savecontent .cu-content-pl .list ul li {
+  padding: 18px 10px;
+  background-color: #FFFFFF;
+}
+.savecontent .cu-content-pl .list ul li .userimg {
   width: 1.17333333rem;
-  height: 1.17333333rem;
-}
-.savecontent .top_render .commentArea .newcomment li .user img {
-  width: 100%;
-  height: 100%;
+  float: left;
+  overflow: hidden;
   border-radius: 50%;
 }
-.savecontent .top_render .commentArea .newcomment li .user_content {
-  padding-left: 1.17333333rem;
-  margin-left: 0.26666667rem;
+.savecontent .cu-content-pl .list ul li .con {
+  overflow: hidden;
+  padding-left: 0.26666667rem;
 }
-.savecontent .top_render .commentArea .newcomment li .user_content .title {
-  height: 0.32rem;
-  line-height: 0.32rem;
+.savecontent .cu-content-pl .list ul li .con .name {
+  margin-bottom: 0.08rem;
+  color: #87B4D2;
+  font-size: 0.18666667rem;
 }
-.savecontent .top_render .commentArea .newcomment li .user_content .title .name {
+.savecontent .cu-content-pl .list ul li .con .name .username {
   float: left;
-  font-size: 0.16rem;
-  color: #5997c0;
 }
-.savecontent .top_render .commentArea .newcomment li .user_content .title .time {
+.savecontent .cu-content-pl .list ul li .con .name .time {
   float: right;
-  font-size: 0.21333333rem;
-  color: #666;
-  font-weight: 500;
+  color: #A2A2A2;
 }
-.savecontent .top_render .commentArea .newcomment li .user_content .comment {
-  font-size: 0.21333333rem;
+.savecontent .cu-content-pl .list ul li .con .content {
+  word-break: break-all;
+  font-size: 0.2rem !important;
+  color: #606060;
+  line-height: 0.26666667rem;
+  padding-top: 0.13333333rem;
 }

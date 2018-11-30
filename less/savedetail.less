@@ -46,91 +46,141 @@
           font-size: 15rem/@base;
           color: #606060;
         }
-        .gobuy {
-          width: 500rem/@base;
-          height: 62rem/@base;
-          line-height: 62rem/@base;
-          text-align: center;
-          color: #fff;
-          background-color: #f4830d;
-          font-size: 20rem/@base;
-          margin-top: 10px;
-          margin-bottom: 5px;
-          border-radius: 5px;
+        .p3 {
+          width: 350rem/@base;
+          height: 350rem/@base;
         }
       }
     }
-    .imgBox {
-      margin-top: 50rem/@base;
-    }
-    .commentArea {
-      .addcomment {
-        .title {
-          height: 60rem/@base;
-          line-height: 60rem/@base ;
-          font-size: 30rem/@base;
-          color: #000;
-          font-weight: 500;
-        }
-        .form {
-          textarea {
-            width: 100%;
-            height: 150rem/@base;
-            border: 1px solid #e4e2df;
-          }
-          .ctrl {
-
-            input {
-              float: right;
-              width: 200rem/@base;
-              height: 72rem/@base;
-              background-color: #FF841D;
-              color: #fff;
-              font-size: 14rem/@base;
+    .wrap {
+      margin-top: 20rem/@base;
+      #disstorck {
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+        width: 138rem/@base;
+        margin: 0 auto;
+        li {
+          font-size: 12rem/@base;
+          font-family: "Microsoft Yahei";
+          line-height: 20rem/@base;
+          a {
+            display: block;
+            padding: 0px 10px;
+            span {
+              border-bottom: 1px dotted #c0c0c0;
+              display: block;
+              padding: 0px 10px;
+              text-align: left;
+              strong {
+                float: right;
+                font-weight: normal;
+                color: #f27b04;
+              }
             }
           }
         }
       }
-      .newcomment{
-        .title{
-          height: 60rem/@base;
-          line-height: 60rem/@base ;
-          font-size: 30rem/@base;
-          color: #000;
-          font-weight: 500;
+    }
+  }
+  .center {
+    .gobuy {
+      width: 100%;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+      text-align: center;
+      color: #fff;
+      background-color: #f4830d;
+      font-size: 20rem/@base;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+  }
+  .imgBox {
+    margin-top: 20rem/@base;
+  }
+  .cu-content-pl {
+    .tit {
+      font-size: 16rem/@base;
+      padding: 6px 8px;
+    }
+    .reply {
+      .form {
+        border: 2px solid #ECEAE8;
+        border-radius: 2px;
+        padding: 4px 0 0 4px;
+        background-color: #fff;
+        position: relative;
+        width: 98%;
+        margin: 0px auto;
+        textarea {
+          width: 100%;
+          resize: none;
+          overflow-x: hidden;
+          overflow-y: auto;
+          border: none;
+          line-height: 22rem/@base;
+          font-size: 14rem/@base;
+          outline: 0;
+          color: #666;
+          height: 68rem/@base;
         }
-        li{
-          .user{
-            float: left;
+        .ctrl {
+          background-color: #fbfbfb;
+          height: 36rem/@base;
+          margin-left: -4px;
+          border-top: solid 1px #f2f2f2;
+          input {
+            position: absolute;
+            right: -2px;
+            bottom: -2px;
+            background: #ff841d;
+            border: none;
+            border: 2px solid #ff841d;
+            border-left: none;
+            border-top: none;
+            padding: 0px;
+            width: 100rem/@base;
+            height: 39rem/@base;
+            color: #fff;
+            outline: 0;
+            border-radius: 0 0 2px 0;
+            font-size: 16rem/@base;
+          }
+        }
+      }
+    }
+    .list {
+      ul {
+        li {
+          padding: 18px 10px;
+          background-color: #FFFFFF;
+          .userimg {
             width: 88rem/@base;
-            height: 88rem/@base;
-            
-            img{
-              width: 100%;
-              height: 100%;
-              border-radius: 50%;
-            }
+            float: left;
+            overflow: hidden;
+            border-radius: 50%;
           }
-          .user_content{
-            padding-left: 88rem/@base;
-            margin-left: 20rem/@base;
-            .title{
-              height: 24rem/@base;
-              line-height:24rem/@base;
-              .name{
+          .con {
+            overflow: hidden;
+            padding-left: 20rem/@base;
+            .name {
+              margin-bottom: 6rem/@base;
+              color: #87B4D2;
+              font-size: 14rem/@base;
+              .username{
                 float: left;
-                font-size: 12rem/@base;
-                color: #5997c0;
               }
               .time{
                 float: right;
-                font-size:16rem/@base;
-                color: #666;
-                font-weight: 500;
+                color: #A2A2A2;
               }
             }
-            .comment{
-              font-size:16rem/@base;
+            .content {
+              word-break: break-all;
+              font-size: 15rem/@base !important;
+              color: #606060;
+              line-height: 20rem/@base;
+              padding-top:10rem/@base;
             }
           }
         }
