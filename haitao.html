@@ -5,36 +5,51 @@
   <meta charset="UTF-8">
   <!-- 设置视口 -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>省钱控商品列表页</title>
+  <title>海淘网</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/savedetail.css">
+  <link rel="stylesheet" href="./css/haitao.css">
 
 </head>
 
 <body style="font-size: 12px;">
   <!-- 页面结构搭建 -->
   <div class="container">
-    <!-- 公共头部 -->
+    <!-- 头部 -->
     <div class="header">
       <div class="logo">
         <a href="javascript:history.go(-1);" title="返回上一页">
+          <!-- <img src="./images/header_logo.png" alt=""> -->
         </a>
       </div>
-      <h3>国内折扣</h3>
+      <h3>省钱控-最新优惠</h3>
 
       <div class="appdown">
         <a href="javascript:;" title="手机app下载">
           <img src="./images/header_app.png" alt="手机app下载">
         </a>
       </div>
+    </div>  
+    <div class="recommen_product clearfix">
+      <!-- 准备第二个坑 -->
+      <ul> 
+      </ul>
     </div>
 
-    <!-- 内容部分 -->
-    <div class="savecontent">
-      <!-- 准备一个大坑 -->
+    <!-- 分页部分 准备一个分页容器-->
+    <div class="page">
+      <span class="w33">
+        <a href="#" class="prev">上一页</a>
+      </span>
+      <span class="w33">
+        <select name="select" class="select" selected>
+         <option value="1">1/2</option>
+        </select>
+      </span>
+      <span class="w33">
+        <a href="#" class="next">下一页</a>
+      </span>
     </div>
-
 
     <!-- 底部部分 -->
     <div class="footer">
@@ -65,57 +80,39 @@
     </div>
   </div>
 
-  <!-- 准备模板引擎 -->
-  <script type="text/html" id="saveTmp">
-    <div class="top_render ">
 
-    <div class="title">
-        {{result[0].productName}}
-    </div>
-    <div class="info">
-      <span>{{result[0].productFrom}}</span>
-      <span>{{result[0].productTime}}</span>
-      <span>{{result[0].productTips}}</span>
-    </div>
-    <div class="content clearfix">
-      <div class="right fr">
-        {{#result[0].productImgSm}}
-      </div>
-      <div class="left"> 
-      <p class="desc">{{result[0].productInfo}}</p>
-      <div class="p3">
-        {{#result[0].productImgLg}}
-        </div>              
-    </div>
-    <div class="wrap">
-        {{#result[0].productCity}}
-    </div>
-    <div class="center">
-        <button class="gobuy">前往购买</button>
-    </div>
-    
-  
-    </div>
-    <div class="imgBox">
-        <img src="./images/mmbweixin2.png" alt="">
-    </div>
-    
-      <!-- 评论展示区域 -->
-   <div class="commentArea">
-      {{#result[0].productComment}}
-   </div>
-         
-  </div>
-
-</script>
-
+   <!-- 准备模板渲染省钱控产品内容 -->
+   <script type="text/html" id="saveTmp">
+    {{ each list as v i }}
+      <li>
+          <a href="savedetail.html?productid={{v.productId}}">
+            <div class="pic">
+             {{#v.productImgSm}}
+            </div>
+            <div class="info clearfix">
+              <div class="title">         
+                 {{v.productName}}           
+                <span>{{v.productPinkage}}</span>
+              </div>
+              <div class="other clearfix">
+                <span class="mall">{{v.productFrom}} | {{v.productTime}}</span>
+                <span class="comment">
+                  <img src="./images/2018-11-28_143352.jpg" alt="">
+                  {{v.counts}}
+                </span>
+              </div>
+            </div>
+          </a>
+        </li>
+        {{ /each }}
+  </script>
 
 
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./js/tools.js"></script>
-  <script src="./js/savedetail.js"></script>
+  <script src="./js/saveMoney.js"></script>
   <script>
 
 

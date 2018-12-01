@@ -1,0 +1,91 @@
+@import "base";
+@import "savedetail";
+.commentArea {
+  .tit {
+    font-size: 16rem/@base;
+    padding: 6px 8px;
+  }
+  .reply {
+    .form {
+      border: 2px solid #ECEAE8;
+      border-radius: 2px;
+      padding: 4px 0 0 4px;
+      background-color: #fff;
+      position: relative;
+      width: 98%;
+      margin: 0px auto;
+      textarea {
+        width: 100%;
+        resize: none;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border: none;
+        line-height: 22rem/@base;
+        font-size: 14rem/@base;
+        outline: 0;
+        color: #666;
+        height: 68rem/@base;
+      }
+      .ctrl {
+        background-color: #fbfbfb;
+        height: 36rem/@base;
+        margin-left: -4px;
+        border-top: solid 1px #f2f2f2;
+        input {
+          position: absolute;
+          right: -2px;
+          bottom: -2px;
+          background: #ff841d;
+          border: none;
+          border: 2px solid #ff841d;
+          border-left: none;
+          border-top: none;
+          padding: 0px;
+          width: 100rem/@base;
+          height: 39rem/@base;
+          color: #fff;
+          outline: 0;
+          border-radius: 0 0 2px 0;
+          font-size: 16rem/@base;
+        }
+      }
+    }
+  }
+  .list {
+    ul {
+      li {
+        padding: 18px 10px;
+        background-color: #FFFFFF;
+        .userimg {
+          width: 88rem/@base;
+          float: left;
+          overflow: hidden;
+          border-radius: 50%;
+        }
+        .con {
+          overflow: hidden;
+          padding-left: 20rem/@base;
+          .name {
+            margin-bottom: 6rem/@base;
+            color: #87B4D2;
+            font-size: 14rem/@base;
+            .username{
+              float: left;
+            }
+            .time{
+              float: right;
+              color: #A2A2A2;
+            }
+          }
+          .content {
+            word-break: break-all;
+            font-size: 15rem/@base !important;
+            color: #606060;
+            line-height: 20rem/@base;
+            padding-top:10rem/@base;
+          }
+        }
+      }
+    }
+  }
+}

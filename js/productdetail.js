@@ -2,7 +2,7 @@ $(function () {
   var productid = tools.getParam("productId");
   $.ajax({
     type: "get",
-    url: "http://192.168.27.24:9090/api/getproduct",
+    url: "http://127.0.0.1:9090/api/getproduct",
     data: {
       productid: productid
     },
@@ -22,7 +22,7 @@ $(function () {
   //发送请求渲染产品详情
   $.ajax({
     type:"get",
-    url:"http://192.168.27.24:9090/api/getproduct",
+    url:"http://127.0.0.1:9090/api/getproduct",
     data:{
       productid:productid
     },
@@ -37,7 +37,7 @@ $(function () {
   //发送ajax获取评论详情
   $.ajax({
     type:"get",
-    url:"http://192.168.27.24:9090/api/getproductcom",
+    url:"http://127.0.0.1:9090/api/getproductcom",
     data:{
       productid:productid
     },

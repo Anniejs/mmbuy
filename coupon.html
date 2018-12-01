@@ -5,11 +5,10 @@
   <meta charset="UTF-8">
   <!-- 设置视口 -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>省钱控商品列表页</title>
+  <title>优惠券</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/savedetail.css">
-
+  <link rel="stylesheet" href="./css/coupon.css">
 </head>
 
 <body style="font-size: 12px;">
@@ -21,7 +20,7 @@
         <a href="javascript:history.go(-1);" title="返回上一页">
         </a>
       </div>
-      <h3>国内折扣</h3>
+      <h3>优惠券</h3>
 
       <div class="appdown">
         <a href="javascript:;" title="手机app下载">
@@ -31,12 +30,15 @@
     </div>
 
     <!-- 内容部分 -->
-    <div class="savecontent">
-      <!-- 准备一个大坑 -->
+    <div class="coupon_product">
+      <ul class="clearfix">
+        <!-- 准备一个坑 -->
+      </ul>
     </div>
+   
 
 
-    <!-- 底部部分 -->
+    <!-- 公共底部底部部分 -->
     <div class="footer">
       <ul class="f-nav clearfix">
         <li class="w30">
@@ -65,57 +67,29 @@
     </div>
   </div>
 
-  <!-- 准备模板引擎 -->
-  <script type="text/html" id="saveTmp">
-    <div class="top_render ">
-
-    <div class="title">
-        {{result[0].productName}}
-    </div>
-    <div class="info">
-      <span>{{result[0].productFrom}}</span>
-      <span>{{result[0].productTime}}</span>
-      <span>{{result[0].productTips}}</span>
-    </div>
-    <div class="content clearfix">
-      <div class="right fr">
-        {{#result[0].productImgSm}}
-      </div>
-      <div class="left"> 
-      <p class="desc">{{result[0].productInfo}}</p>
-      <div class="p3">
-        {{#result[0].productImgLg}}
-        </div>              
-    </div>
-    <div class="wrap">
-        {{#result[0].productCity}}
-    </div>
-    <div class="center">
-        <button class="gobuy">前往购买</button>
-    </div>
-    
-  
-    </div>
-    <div class="imgBox">
-        <img src="./images/mmbweixin2.png" alt="">
-    </div>
-    
-      <!-- 评论展示区域 -->
-   <div class="commentArea">
-      {{#result[0].productComment}}
-   </div>
+  <!-- 准备模板引擎 渲染导航-->
+  <script type="text/html" id="couponTmp">
+    {{each result as v i }}
+    <li>
+        <a href="{{v.couponLink}}?couponid={{v.couponId}}">
+          <div class="imgBox">
+              <img src="{{v.couponImg}}" alt="">
+              {{v.couponTitle}}
+          </div>
          
-  </div>
-
-</script>
-
+        </a>
+      </li>
+      {{/each}}
+  </script>
+<!-- 准备第二个模板 -->
 
 
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./js/tools.js"></script>
-  <script src="./js/savedetail.js"></script>
+  <script src="./lib/iscroll.js"></script>
+  <script src="./js/coupon.js"></script>
   <script>
 
 

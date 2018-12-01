@@ -9,7 +9,7 @@ $(function () {
   console.log(location.search);
   $.ajax({
     type: "get",
-    url: "http://192.168.27.24:9090/api/getcategorybyid",
+    url: "http://127.0.0.1:9090/api/getcategorybyid",
     data: {
       categoryid: categoryid
     },
@@ -28,7 +28,7 @@ $(function () {
   function render(pageid) {
     $.ajax({
       type: "get",
-      url: "http://192.168.27.24:9090/api/getproductlist",
+      url: "http://127.0.0.1:9090/api/getproductlist",
       data: {
         categoryid: categoryid,
         pageid: pageid

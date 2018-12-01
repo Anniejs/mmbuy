@@ -427,43 +427,151 @@ i {
   box-shadow: 0 0 1px #666;
   color: #000;
 }
-.category {
-  margin-bottom: 20px;
-  border: 1px solid #ededed;
-  border-radius: 10px;
-  border-bottom: none;
+.container {
+  background-color: #f7f7f7;
 }
-.category .item-list {
-  background-color: #ededed;
-  line-height: 0.93333333rem;
-  font-size: 0.21333333rem;
+.container .header {
+  background-color: #f4483e;
 }
-.category .item-list .getCategory {
+.container .header .logo {
+  width: 1.33333333rem;
+  height: 100%;
+  float: left;
+}
+.container .header .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/right.svg") no-repeat center center;
+  background-size: 52%;
+}
+.container .header h3 {
+  height: 0.66666667rem;
+  line-height: 0.66666667rem;
+  font-size: 0.33333333rem;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  padding-right: 0.93333333rem;
+}
+.container .etamcontent .head_tap {
+  overflow: hidden;
+  height: 1.06666667rem;
+  background-color: #fff;
+  margin-bottom: 0.06666667rem;
+  position: relative;
+}
+.container .etamcontent .head_tap ul {
+  width: 2000px;
+}
+.container .etamcontent .head_tap ul li {
+  float: left;
+  font-size: 0.16rem;
+  line-height: 1.06666667rem;
+}
+.container .etamcontent .head_tap ul li.active a {
+  color: #de1f1f;
+  border-bottom: 2px solid #de1f1f;
+}
+.container .etamcontent .head_tap ul li a {
+  display: block;
+  margin: 0 0.16rem;
   color: #000;
-  font-weight: 600;
+}
+.container .etamcontent .head_tap .icon_search {
+  position: absolute;
+  top: 0.05333333rem;
+  right: 0;
+  width: 1.06666667rem;
+  height: 1.06666667rem;
+}
+.container .etamcontent .head_tap .icon_search img {
+  width: 100%;
+  height: 100%;
+}
+.container .etamcontent .pro_list ul li {
+  margin: 0.06666667rem 0;
+  padding: 0.05333333rem 0.02666667rem;
+  background: #fff;
+}
+.container .etamcontent .pro_list ul li .left {
+  float: left;
+  width: 3.52rem;
+  height: 3.64rem;
+}
+.container .etamcontent .pro_list ul li .left img {
   width: 100%;
   height: 100%;
   display: block;
-  background: url(../images/arrow.jpg) no-repeat right center;
-  border-bottom: 1px solid #ccc;
 }
-.category .item-list ul {
-  border: 1px solid #ccc;
-  border-bottom: none;
-  border-top: none;
-  background-color: #f9f9f9;
+.container .etamcontent .pro_list ul li .right {
+  overflow: hidden;
 }
-.category .item-list ul li {
-  float: left;
-  width: 33.3%;
+.container .etamcontent .pro_list ul li .right .title {
+  height: 1.06666667rem;
+  font-size: 0.18666667rem;
+}
+.container .etamcontent .pro_list ul li .right .title .b {
+  color: #fc2e6b;
+}
+.container .etamcontent .pro_list ul li .right .price {
+  height: 0.8rem;
+  font-size: 0.26666667rem;
+  color: #FC2E6B;
+  margin-bottom: 0.06666667rem;
+  line-height: 0.4rem;
+}
+.container .etamcontent .pro_list ul li .right .price del {
+  font-size: 0.16rem;
+  color: #999999;
+}
+.container .etamcontent .pro_list ul li .right .bar {
+  height: 0.26666667rem;
+  font-size: 0.16rem;
+  color: #fc2e6b;
+  margin-bottom: 0.4rem;
+}
+.container .etamcontent .pro_list ul li .right .bar i {
+  height: 0.21333333rem;
+  line-height: 0.21333333rem;
+  width: 45%;
+  display: inline-block;
+  background: #ffb7b7;
   text-align: center;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  box-sizing: border-box;
-  text-indent: 0;
+  color: #fff;
+  border: 1px solid #fc353a;
+  position: relative;
+  border-radius: 0.13333333rem;
+  z-index: 2;
+  top: 4px;
+  overflow: hidden;
 }
-.category .item-list ul li a {
-  color: #666;
+.container .etamcontent .pro_list ul li .right .bar b {
+  margin-left: 0.26666667rem;
+}
+.container .etamcontent .pro_list ul li .right .bot {
+  margin-top: 0.13333333rem;
+  font-size: 0.16rem;
+  height: 0.74666667rem;
+  line-height: 0.74666667rem;
+}
+.container .etamcontent .pro_list ul li .right .bot :nth-child(1) {
   height: 100%;
-  display: block;
+  float: left;
+  padding: 0 5px;
+  color: #e97b66;
+  display: inline-block;
+  border: 1px dashed #e97b66;
+}
+.container .etamcontent .pro_list ul li .right .bot :nth-child(2) {
+  display: inline-block;
+  float: right;
+  height: 100%;
+  padding: 1px 0.06666667rem;
+  width: auto;
+  background: #ff5e5d;
+  color: #fff;
+  border-radius: 0.08rem;
+  font-size: 0.16rem;
 }

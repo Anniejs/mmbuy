@@ -2,7 +2,7 @@ $(function(){
    // 发送ajax请求获取menu信息渲染到页面
    $.ajax({
     type:"get",
-    url:"http://192.168.27.62:9090/api/getindexmenu",
+    url:"http://127.0.0.1:9090/api/getindexmenu",
     success:function(data){
         console.log(data);
         $(".nav ul").html(template("tpl",{list : data.result}));
@@ -17,7 +17,7 @@ $(function(){
   //发送ajax请求去后台拿产品的数据
   $.ajax({
     type:"get",
-    url:"http://192.168.27.62:9090/api/getmoneyctrl",
+    url:"http://127.0.0.1:9090/api/getmoneyctrl",
     dataType:"json",
     success:function(data){
       console.log(data);

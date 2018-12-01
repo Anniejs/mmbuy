@@ -1,0 +1,59 @@
+@import "base";
+// 头部公共样式
+.container {
+  .header {
+    background-color: #f4483e;
+    .logo {
+      width: 100rem / @base;
+      height: 100%;
+      float: left;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("../images/right.svg") no-repeat center center;
+        background-size: 52%;
+      }
+    }
+    h3 {
+      height: 50rem / @base;
+      line-height: 50rem / @base;
+      font-size: 25rem / @base;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      overflow: hidden;
+      padding-right: 70rem / @base;
+    }
+  } 
+  
+  // 优惠券产品内容部分
+  .coupon_product {
+    ul {
+      padding: 10rem/@base;
+      li {
+        float: left;
+        width: 233rem/@base;
+        height: 153rem/@base;
+        border: 1px solid #f1f1f1;
+        padding: 5rem/@base 20rem/@base;
+        margin-top: 5rem/@base;
+        margin-right: 5rem/@base;
+        a {
+          .imgBox {
+            width: 100rem/@base;
+            height: 100rem/@base;
+            margin: 0 auto;
+            font-size: 14rem/@base;
+            text-align: center;
+            img {
+              width: 100%;
+              height: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

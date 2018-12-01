@@ -1,7 +1,7 @@
 $(function(){
  $.ajax({
    type:"get",
-   url:"http://192.168.27.62:9090/api/getcategorytitle",
+   url:"http://127.0.0.1:9090/api/getcategorytitle",
    dataType:"json",
    success:function(info){
      console.log(info);
