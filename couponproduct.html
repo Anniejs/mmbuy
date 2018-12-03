@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <title>肯德基优惠券</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/couponproduct.css">
 </head>
@@ -70,13 +71,29 @@
       <p class="url">m.manmanbuy.com</p>
     </div>
   </div>
+  <!-- 模态框部分 -->
+  <div class="modal" id="slideModal">
+      <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./images/slide1jpg.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="./images/slide2.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="./images/slide3.jpg" alt=""></div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+          
+          <!-- 如果需要导航按钮 -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>          
+      </div>
+  </div>
 
   <!-- 准备模板引擎 渲染导航-->
   <script type="text/html" id="couponproTmp">
     {{each result as v i }}
     <ul class="clearfix">
         <li class="clearfix">
-          <a href="#">
+          <a href="#" id="showModal">
             <div class="pic">
               {{#v.couponProductImg}}
             </div>
@@ -99,8 +116,10 @@
 
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/bootstrap/js/bootstrap.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./js/tools.js"></script>
+  <script src="./lib/swiper/js/swiper.min.js"></script>
   <script src="./lib/iscroll.js"></script>
   <script src="./js/couponproduct.js"></script>
 

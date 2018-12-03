@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <!-- 设置视口 -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>白菜价</title>
+  <title>商城导航</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/etam.css">
+  <link rel="stylesheet" href="./css/mall.css">
 </head>
 
 <body style="font-size: 12px;">
@@ -20,7 +20,7 @@
         <a href="javascript:history.go(-1);" title="返回上一页">
         </a>
       </div>
-      <h3>白菜价-淘宝内部券</h3>
+      <h3>商城导航</h3>
 
       <div class="appdown">
         <a href="javascript:;" title="手机app下载">
@@ -29,27 +29,10 @@
       </div>
     </div>
 
-    <!-- 内容部分 -->
-    <div class="etamcontent">
-      <!-- 头部导航 -->
-      <div class="head_tap clearfix">
-        <!-- 区域滚动盒子 -->
-        <div id="wrapper">
-          <ul class="nav_list clearfix">
-            <!--准备一个坑  -->
-          </ul>
-        </div>
-
-        <div class="icon_search">
-          <img src="./images/menu.jpg" alt="">
-        </div>
-      </div>
-
-      <!-- 产品列表 -->
-      <div class="pro_list">
-        <ul class="li_list">
-          <!-- 准备第二个坑 -->
-        </ul>
+    <!-- 品牌导航 -->
+    <div class="site_nav">
+      <div class="link clearfix">
+       <!-- 准备坑 -->
       </div>
     </div>
     <!-- 公共底部底部部分 -->
@@ -81,49 +64,22 @@
     </div>
   </div>
 
-  <!-- 准备模板引擎 渲染导航-->
-  <script type="text/html" id="etamTmp">
+
+  <!-- 准备模板引擎 渲染一级导航-->
+  <script type="text/html" id="mallTmp">
     {{each result as v i }}
-    <li class=" {{i === 0 ? "active" : ""}}" data-id ="{{v.titleId}}">
-        <a href="#">
-          {{v.title}}
-        </a>
-      </li>  
-      {{/each}}
+    <a href="{{v.navHref}}" data-id = "{{v.navId}}">
+        <img src="{{v.navImg}}" alt="">
+        {{v.navTitle}}
+    </a>
+    {{/each}}
   </script>
-  <!-- 准备第二个模板 -->
-  <script type="text/html" id="etamTmp1">
-    {{each result as v i }}
-        <li class="clearfix">
-          <!-- 这个盒子用于放当图片加载不出来的时候的提示信息 -->
-          <a href="#"></a>
-          <div class="left">
-            {{#v.productImg}}
-          </div>
-          <div class="right">
-            <div class="title txt-cut">
-              {{#v.productName}}       
-            </div>
-            <p class="price">
-              {{#v.productPrice}}
-            </p>
-            {{#v.productCouponRemain}}
-            <div class="bot clearfix">
-                {{#v.productCoupon}} {{#v.productHref}}
-            </div>
-          </div>
-        </li>
-
-      {{/each}}
-  </script>
-
-
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./js/tools.js"></script>
   <script src="./lib/iscroll.js"></script>
-  <script src="./js/etam.js"></script>
+  <script src="./js/mall.js"></script>
   <script>
 
 

@@ -5,22 +5,23 @@
   <meta charset="UTF-8">
   <!-- 设置视口 -->
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>优惠券</title>
+  <title>品牌排行</title>
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/coupon.css">
+  <link rel="stylesheet" href="./css/brand.css">
+
 </head>
 
 <body style="font-size: 12px;">
   <!-- 页面结构搭建 -->
   <div class="container">
-    <!-- 公共头部 -->
+    <!-- 头部 -->
     <div class="header">
       <div class="logo">
-        <a href="javascript:history.go(-1);" title="返回上一页">
+        <a href="index.html" title="慢慢买">
+          <img src="./images/header_logo.png" alt="">
         </a>
       </div>
-      <h3>优惠券</h3>
 
       <div class="appdown">
         <a href="javascript:;" title="手机app下载">
@@ -28,17 +29,44 @@
         </a>
       </div>
     </div>
+    <!-- 搜索部分 -->
+    <div id="form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品" name="">
+        <input type="button" value="搜索">
+      </form>
+    </div>
+    <!-- 导航部分 -->
+    <div class="pro_nav clearfix">
+      <div class="nav_left">
+        <ul class="clearfix">
+            <li>
+                <a href="index.html">首页></a>
+              </li>
+              <li>
+                <a href="category.html">全部分类></a>
+              </li>
+              <!-- <li>
+                <a href="javascript:;">{{result[0].category}}></a>
+              </li> -->
+        </ul>
+      </div>
+      <div class="nav_right">
+        <button class="fr">筛选</button>
+      </div>
 
-    <!-- 内容部分 -->
-    <div class="coupon_product">
-      <ul class="clearfix">
-        <!-- 准备一个坑 -->
+    </div>
+    <div class="hot">
+      热门品牌排行
+    </div>
+    <div class="ca_section">
+      <ul>
+      
       </ul>
     </div>
-   
 
 
-    <!-- 公共底部底部部分 -->
+    <!-- 底部部分 -->
     <div class="footer">
       <ul class="f-nav clearfix">
         <li class="w30">
@@ -66,30 +94,24 @@
       <p class="url">m.manmanbuy.com</p>
     </div>
   </div>
-
-  <!-- 准备模板引擎 渲染导航-->
-  <script type="text/html" id="couponTmp">
-    {{each result as v i }}
+  <!-- 准备模板引擎渲染分类 -->
+  <script type="text/html" id="cagetoryId">
+    
+    </script>
+  <!-- 准备模板引擎 -->
+  <script type="text/html" id="brandTmp">
+    {{ each result as v i }}
     <li>
-        <a href="{{v.couponLink}}?couponid={{v.couponId}}">
-          <div class="imgBox">
-              <img src="{{v.couponImg}}" alt="">
-              {{v.couponTitle}}
-          </div>
-         
-        </a>
+        <a href="brandcontent.html?brandtitleId={{v.brandTitleId}}" data-id = "{{v.brandTitleId}}">{{v.brandTitle}}</a>
       </li>
-      {{/each}}
-  </script>
-<!-- 准备第二个模板 -->
-
+  {{/each}}
+</script>
 
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/flexible/flexible.js"></script>
   <script src="./js/tools.js"></script>
-  <script src="./lib/iscroll.js"></script>  
-  <script src="./js/coupon.js"></script>
+  <script src="./js/brand.js"></script>
   <script>
 
 

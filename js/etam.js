@@ -3,8 +3,6 @@ $(function () {
   var myScroll = new IScroll('#wrapper', {
     scrollX: true, //横向滚动
     scrollY: false //纵向滚动
-
-
   });
   var titleid = 0;
   //功能2-渲染头部导航

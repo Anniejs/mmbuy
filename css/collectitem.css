@@ -427,8 +427,11 @@ i {
   box-shadow: 0 0 1px #666;
   color: #000;
 }
+.container {
+  background-color: #F1F1F1;
+}
 .container .header {
-  background-color: #f4483e;
+  background-color: #FF841D;
 }
 .container .header .logo {
   width: 1.33333333rem;
@@ -452,64 +455,150 @@ i {
   overflow: hidden;
   padding-right: 0.93333333rem;
 }
-.container .coupon_product .title {
-  font-size: 0.16rem;
-  color: #666;
-  text-align: center;
-  margin-top: 0.13333333rem;
-}
-.container .coupon_product .product_list ul {
-  margin-top: 0.26666667rem;
-}
-.container .coupon_product .product_list ul li {
-  height: 2.76rem;
-  border-bottom: 1px solid #ccc;
+.container .nav {
+  position: relative;
+  height: 1.04rem;
   background-color: #fff;
 }
-.container .coupon_product .product_list ul li a .pic {
-  float: left;
-  width: 2.66666667rem;
-  height: 2.13333333rem;
+.container .nav .nav_list li a p {
+  text-align: center;
+  font-size: 0.21333333rem;
+  color: #333;
 }
-.container .coupon_product .product_list ul li a .pic img {
+.container .nav .nav_list li a p i {
+  font-style: normal;
+  width: 0.13333333rem;
+  height: 0.13333333rem;
+  display: inline-block;
+  background-size: 200%;
+  background: url("../images/c_arrow.jpg") no-repeat center center;
+}
+.container .nav .c_search {
+  width: 15%;
+  position: absolute;
+  right: 0;
+  height: 1.04rem;
+  top: 0;
+}
+.container .nav .c_search img {
+  width: 100%;
+  height: 100%;
+}
+.container .nav .second_ul {
+  font-size: 0.18666667rem;
+  background: #fff;
+  position: absolute;
+  top: 1.04rem;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 3px 6px #dddddd;
+}
+.container .nav .second_ul li {
+  border-top: 1px solid #ccc;
+  height: 1.04rem;
+  line-height: 1.04rem;
+  width: 100%;
+  position: relative;
+}
+.container .nav .second_ul li.now:after {
+  content: '';
+  display: block;
+  width: 0.26666667rem;
+  height: 0.26666667rem;
+  position: absolute;
+  right: 0.13333333rem;
+  top: 0.13333333rem;
+  background: url(../images/ok.svg) no-repeat center right;
+  background-size: 100%;
+}
+.container .nav .second_ul li a {
+  color: #333;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.13333333rem;
+  text-align: left;
+}
+.container .nav .second_ul_hb {
+  font-size: 0.21333333rem;
+  background: #fff;
+  position: absolute;
+  top: 1.04rem;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 3px 6px #dddddd;
+}
+.container .nav .second_ul_hb li {
+  border-top: 1px solid #ccc;
+  height: 1.04rem;
+  line-height: 1.04rem;
+  width: 100%;
+  position: relative;
+  text-align: left;
+}
+.container .nav .second_ul_hb li.now:after {
+  content: '';
+  display: block;
+  width: 0.26666667rem;
+  height: 0.26666667rem;
+  position: absolute;
+  right: 0.13333333rem;
+  top: 0.13333333rem;
+  background: url("../images/cp_2.jpg") no-repeat center right;
+  background-size: 100%;
+}
+.container .nav .second_ul_hb li a {
+  color: #333;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.13333333rem;
+}
+.container .main .li_list {
+  padding: 0.06666667rem;
+}
+.container .main .li_list li {
+  width: 48%;
+  float: left;
+  font-size: 0.18666667rem;
+  margin-right: 2%;
+  margin-bottom: 0.06666667rem;
+  background-color: #fff;
+}
+.container .main .li_list li a .imgBox {
+  width: 100%;
+  height: 4.26666667rem;
+}
+.container .main .li_list li a .imgBox img {
   width: 100%;
   height: 100%;
   display: block;
 }
-.container .coupon_product .product_list ul li a .info {
-  overflow: hidden;
-  padding-left: 10px;
-  font-size: 14px;
-  color: #333;
-  position: relative;
-}
-.container .coupon_product .product_list ul li a .info .title {
-  margin-bottom: 0.33333333rem;
-  min-height: 1.86666667rem;
-}
-.container .coupon_product .product_list ul li a .info .title .p1 {
-  font-size: 0.18666667rem;
-  margin-bottom: 0.06666667rem;
-  text-align: left;
-  color: #333;
-}
-.container .coupon_product .product_list ul li a .info .title .price {
-  font-size: 0.18666667rem;
-  text-align: left;
-  font-weight: 800;
-  color: #000;
-}
-.container .coupon_product .product_list ul li a .info .time {
-  margin-bottom: 0.13333333rem;
-  color: #F3A45C;
-  font-size: 0.16rem;
-}
-.container #slideModal {
-  width: 200px;
-  height: 160px;
-  z-index: 999;
-}
-.container #slideModal .swiper-container img {
+.container .main .li_list li a .tips {
   width: 100%;
+  padding: 0 0.06666667rem;
+  margin-top: 0.08rem;
+  font-size: 0.16rem;
+  margin-bottom: 0.08rem;
+  color: #333;
+}
+.container .main .li_list li a .other {
+  padding: 0 0.06666667rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin-bottom: 0.08rem;
+}
+.container .main .li_list li a .other .price {
+  height: 0.8rem;
+  font-size: 0.24rem;
+  color: #F7482C;
+}
+.container .main .li_list li a .other .btn {
+  width: 1.68rem;
   height: 100%;
+  line-height: 0.53333333rem;
+  background-color: #FF841D;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
 }

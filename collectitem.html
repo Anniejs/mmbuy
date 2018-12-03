@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 设置视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>凑单品</title>
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/collectitem.css">
+</head>
+
+<body style="font-size: 12px;">
+  <!-- 页面结构搭建 -->
+  <div class="container">
+    <!-- 公共头部 -->
+    <div class="header">
+      <div class="logo">
+        <a href="javascript:history.go(-1);" title="返回上一页">
+        </a>
+      </div>
+      <h3>凑单品</h3>
+
+      <div class="appdown">
+        <a href="javascript:;" title="手机app下载">
+          <img src="./images/header_app.png" alt="手机app下载">
+        </a>
+      </div>
+    </div>
+
+    <!-- 头部导航 -->
+    <div class="nav">
+      <ul class="nav_list clearfix">
+        <li class="fl w33 level2_li jd">
+          <a href="#">
+            <p>
+              <span class="nav_name_jd">京东</span>
+              <i></i>
+            </p>
+          </a>
+        </li>
+        <li class="fl w33 level2_li hb">
+          <a href="#">
+            <p>
+              <span class="nav_name_hb">华北</span>
+              <i></i>
+            </p>
+          </a>
+        </li>
+        <li class="fl w33">
+          <a href="#">
+            <p>
+              <span>全部价格</span>
+              <i></i>
+            </p>
+          </a>
+        </li>
+
+      </ul>
+      <div class="c_search">
+        <img src="./images/menu.jpg" alt="">
+      </div>
+
+      <!-- 此处是下拉框里面的ul元素 -->
+      <!-- 京东下拉框内容 -->
+      <ul class="second_ul">
+        <!-- 准备第一个坑 -->
+      </ul>
+      <!-- 华北下拉框内容 -->
+      <ul class="second_ul_hb">
+        <!-- 准备第二个坑 -->
+      </ul>
+    </div>
+
+    <!-- 产品列表 -->
+    <div class="main">
+      <ul class="li_list clearfix">
+        <!-- 准备第二个坑 -->
+
+      </ul>
+    </div>
+    <!-- 公共底部底部部分 -->
+    <div class="footer">
+      <ul class="f-nav clearfix">
+        <li class="w30">
+          <a href="#">登录</a>
+        </li>
+        <li class="w30">
+          <a href="#">注册</a>
+        </li>
+        <li class="w40">
+          <img src="./images/top.jpg" alt="">
+          <a href="#">返回顶部</a>
+        </li>
+      </ul>
+      <p class="Addr">
+        <a href="#" class="phoneApp">
+          手机APP下载
+        </a>
+        <a href="#" class="phone">
+          慢慢买手机版
+        </a>
+
+        -- 掌上比价平台
+
+      </p>
+      <p class="url">m.manmanbuy.com</p>
+    </div>
+  </div>
+
+
+  <!-- 准备模板引擎 渲染产品二级导航-->
+  <script type="text/html" id="firstTmp">
+    {{each result as v i}}
+    <li data-name="{{v.shopName}}" data-id="{{v.shopId}}" class="level2_li">
+        <a href="#">{{v.shopName}}</a>
+    </li>
+    {{/each}}
+  </script>
+  <!-- 准备模板引擎 渲染地区二级导航-->
+  <script type="text/html" id="secondTmp">
+    {{each result as v i }}
+    <li data-id = "{{v.areaId}}" data-name = "{{v.areaName}}" class="level2_li">
+        <a href="#">{{v.areaName}}</a>
+      </li>
+   {{/each}}
+  </script>
+  <!-- 准备模板渲染产品列表 -->
+  <script type="text/html" id="mainTmp">
+    {{each result as v i }}
+    <li>
+        <a href="#">
+          <div class="imgBox">
+            <img src="{{v.productImg}}" alt="">
+          </div>
+          <div class="tips one-txt-cut">
+            {{v.productName}}
+          </div>
+          <div class="other clearfix">
+            <span class="price fl">{{v.productPrice}}</span>
+            <span class="btn fr">去凑单</span>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+  </script>
+
+
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/flexible/flexible.js"></script>
+  <script src="./js/tools.js"></script>
+  <script src="./lib/iscroll.js"></script>
+  <script src="./js/collectitem.js"></script>
+
+  <script>
+
+
+
+  </script>
+</body>
+
+</html>
