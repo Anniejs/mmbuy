@@ -53,19 +53,12 @@
     </div>
 
     <!-- 分页部分 准备一个分页容器-->
-    <div class="page">
-      <span class="w33">
-        <a href="#" class="prev">上一页</a>
-      </span>
-      <span class="w33">
-        <select name="select" class="select" selected>
-          <option value="1">1/2</option>
+    <div class="page clearfix">
+      <button class="prev fl">上一页</button>
 
-        </select>
-      </span>
-      <span class="w33">
-        <a href="#" class="next">下一页</a>
-      </span>
+      <select class="fl middle_x select" id="page_select"></select>
+
+      <button class="next fr">下一页</button>
     </div>
 
     <!-- 底部部分 -->
@@ -129,7 +122,18 @@
           </div>          
         </a> 
   {{/each}}
+ </script>
+  <!-- 分页跳转下拉菜单模板 -->
+  <script type="text/html" id="page_list">
+    {{each data v i}}
+    {{if i == v.currentPageNum-1}}
+    <option selected value="{{i + 1}}">{{i + 1}}&nbsp;/&nbsp;{{v.totlePage}}</option>
+    {{else}}
+    <option value="{{i + 1}}">{{i + 1}}&nbsp;/&nbsp;{{v.totlePage}}</option>
+    {{/if}}
+    {{/each}}
 </script>
+
 
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./lib/jquery/jquery.min.js"></script>

@@ -105,6 +105,11 @@ i {
 .w50 {
   width: 50%;
 }
+.middle_x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /*清除浮动*/
 /*
   双伪元素法

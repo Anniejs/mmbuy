@@ -6,8 +6,7 @@
   background-color: #fff;
   padding: 10rem/@base;
 
-  .box{
-    
+  .box{    
     border-bottom: 1px solid #ccc;
     
   }
@@ -16,8 +15,7 @@
     width: 140rem/@base;
     height: 140rem/@base;
   }
-  .right{
-  
+  .right{  
     height: 140rem/@base;
     padding-left: 20rem/@base;
     overflow: hidden;
@@ -35,5 +33,34 @@
   }
 
 }
+// 慢慢买商品列表分页跳转
+.page{
+  height: 75rem/@base;
+  position: relative;
+  button{
+    width: 165rem/@base;
+    height: 75rem/@base;
+    text-align: center;
+    line-height: 75rem/@base;
+    box-shadow: 0 0 1px #666;
+    background-image: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    font-size: 14rem/@base;
+    color: #000;
+    position: absolute;
+    bottom: 5rem/@base;
+    &.prev{
+      left: 15rem/@base;
+    }
+    &.next{
+      right:15rem/@base;
+    }
+
+  }
+}
+
+
+
 
 

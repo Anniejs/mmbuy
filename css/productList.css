@@ -105,6 +105,11 @@ i {
 .w50 {
   width: 50%;
 }
+.middle_x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 /*清除浮动*/
 /*
   双伪元素法
@@ -451,4 +456,28 @@ i {
 }
 .pro_content .right .info {
   margin-top: 0.66666667rem;
+}
+.page {
+  height: 1rem;
+  position: relative;
+}
+.page button {
+  width: 2.2rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  box-shadow: 0 0 1px #666;
+  background-image: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+  border-radius: 5px;
+  background-color: #d4d4d4;
+  font-size: 0.18666667rem;
+  color: #000;
+  position: absolute;
+  bottom: 0.06666667rem;
+}
+.page button.prev {
+  left: 0.2rem;
+}
+.page button.next {
+  right: 0.2rem;
 }
